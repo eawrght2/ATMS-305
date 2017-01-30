@@ -1,0 +1,108 @@
+ 1  qlogin
+    2  exit
+    3  git clone https://github.com/eawrght2/ATMS-305.git
+    4  cd ..
+    5  cd /data/keeling/a/eawrght2
+    6  pico signature.txt
+    7  cd ..
+    8  pwd
+    9  ls
+   10  pwd
+   11  cd
+   12  ls
+   13  cd root
+   14  cd
+   15  exit
+   16  qlogin
+   17  ls
+   18  cd atms305
+   19  ls
+   20  mkdir data/atms305/a/eawrght2/ATMS-305/Week2answers
+   21  ls
+   22  mkdir Week2answers
+   23  cd Week2answers
+   24  ls
+   25  pice signature.txt 
+   26  chsh
+   27  pico signature.txt
+   28  cd
+   29  ls
+   30  cd atms305
+   31  ls
+   32  cd
+   33  cd ATMS-305
+   34  ls
+   35  mkdir /data/atms305/a/eawrght2/ATMS-305/Week2answers
+   36  cd Week 2 -Tuesday
+   37  cd
+   38  ls
+   39  rmdir atms305
+   40  ls
+   41  cd ATMS-305
+   42  ls
+   43  chsh
+   44  ls
+   45  cd ..
+   46  ls
+   47  cd ..
+   48  ls
+   49  cd a
+   50  ls
+   51  cd eawrght2
+   52  ls
+   53  cd ATMS-305
+   54  ls
+   55  mkdir Week2answers
+   56  cd Week2answers/
+   57  pico signature.txt
+   58  ls
+   59  exit
+   60  exit
+   61  qlogin
+   62  chsh
+   63  ls
+   64  cd ATMS-305
+   65  ls
+   66  git add -A
+   67  git commit -m "it works"
+   68  git push origin master
+   69  git config --global pack.windowMemory "100m"
+   70  git config --global pack.SizeLimit "100m"
+   71  git config --global pack.threads "1"
+   72  git push origin master
+   73  exit
+   74  exit
+   75  chsh
+   76  cd ATMS-305
+   77  ls
+   78  cd ..
+   79  pwd
+   80  ls
+   81  cd
+   82  pwd
+   83  cd
+   84  pwd
+   85  cd
+   86  ls
+   87  cd root
+   88  pwd
+   89  cd /
+   90  cd etc.
+   91  ls
+   92  cd etc .
+   93  ls
+   94  cat inittab
+   95  cd
+   96  file .
+   97  cat .
+   98  cat --help option
+   99  man intro
+  100  man ls
+  101  info passwd
+  102  apropos pwd
+  103  man cd
+  104  info cd
+  105  ls --help
+  106  hisstory
+  107  history
+
