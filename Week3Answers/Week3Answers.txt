@@ -1,10 +1,27 @@
 ------------------------------
 Output From Problem 1
+#!/bin/bash
+
+echo $@
+echo $#
+
 ./HW2script1.sh hello how are you
 hello how are you
 4
 ------------------------------
 Output From Problem 2
+#!/bin/bash
+
+Year=$( TZ=UTC date | cut -d' ' -f 7 | sort )
+Time=$( TZ=UTC date | cut -d' ' -f 5 | sort )
+Day=$( TZ=UTC date | cut -d' ' -f 4 | sort )
+Month=$( TZ=UTC date +%m )
+NetID=eawrght2.txt
+Underscore=_
+filename=$Year-$Month-$Day$Underscore$Time$Underscore$NetID
+
+cp HW2script2.sh $filename
+
 eawrght2@keeling-f01 Week3Answers: $ ./HW2script2.sh 
 eawrght2@keeling-f01 Week3Answers: $ ls
 2017-02-6_02:52:25_eawrght2.txt  HW2script1.sh  Week3Answers.txt
