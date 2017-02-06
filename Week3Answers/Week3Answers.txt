@@ -1,0 +1,12 @@
+------------------------------
+Output From Problem 1
+./HW2script1.sh hello how are you
+hello how are you
+4
+------------------------------
+Output From Problem 2
+eawrght2@keeling-f01 Week3Answers: $ ./HW2script2.sh 
+eawrght2@keeling-f01 Week3Answers: $ ls
+2017-02-6_02:52:25_eawrght2.txt  HW2script1.sh  Week3Answers.txt
+2017-02-6_02:53:03_eawrght2.txt  HW2script2.sh  Week3Answes.txt
+------------------------------
