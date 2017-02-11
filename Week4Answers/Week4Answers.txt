@@ -1,0 +1,34 @@
+---------------------------------
+Output From Problem 1
+#!/usr/bin/python
+ncars=100
+npass=85
+ndrivers=30
+ncars_left=ncars-ndrivers
+print(ncars_left)
+ncars_used=(ncars-ncars_left)
+print(ncars_used)
+transported=(ndrivers+npass)
+print(transported)
+avg_pass=(npass/ndrivers)
+print(avg_pass)
+
+eawrght2@keeling Week4Answers: $ python HW3script1.py
+70
+30
+115
+2
+---------------------------------
+Output From Problem 2
+#!/usr/bin/env python
+import math
+temp=float(input("Please input a temp in C: "))
+numerator=17.625*temp
+denominator=temp+243.04
+svp=6.1094*math.exp(numerator/denominator)
+print('Saturation Vapor Pressure is', svp)
+
+eawrght2@keeling Week4Answers: $ python HW3script2.py
+Please input a temp in C: 10
+('Saturation Vapor Pressure is', 12.260206350234858)
+---------------------------------
