@@ -1,0 +1,81 @@
+---------------------------------
+Output From Problem 1
+filename='aravg.ann.land_ocean.90S.90N.v4.0.1.201612.asc'
+wxdata={'year':[],'temperature':[]}
+with open(filename, "r") as f:
+    alist = f.read().splitlines()
+for line in alist:
+    wxdata['year'].append(int(line.split()[0]))
+    wxdata['temperature'].append(float(line.split()[1]))
+wxdata['temperature'], 
+wxdata['year']=zip(*sorted(zip(wxdata['temperature'],wxdata['year']),reverse=True))
+for x in range(0,10):
+    print "year = " + repr(wxdata['year'][x]) +  " temperature = " + 
+repr(wxdata['temperature'][x])
+
+year = 2016 temperature = 0.69095099999999998
+year = 2015 temperature = 0.65447999999999995
+year = 2014 temperature = 0.49547099999999999
+year = 2010 temperature = 0.45603500000000002
+year = 2013 temperature = 0.42251899999999998
+year = 2005 temperature = 0.41319600000000001
+year = 2009 temperature = 0.391374
+year = 1998 temperature = 0.389096
+year = 2012 temperature = 0.37870599999999999
+year = 2003 temperature = 0.368062
+---------------------------------
+Output From Problem 2
+filename='CMI.csv'
+day=[]
+temp=[]
+obs=[]
+with open(filename,"r") as f:  
+    first_line = f.readline()
+    alist = f.read().splitlines()
+for line in alist:
+    day.append(line.split(',')[1])
+    temp.append(line.split(',')[2])  
+    obs.append(line.split(',')[10])
+
+day.remove('2016-12-20 11:53')
+temp.remove('M')
+day.remove('2016-05-01 00:00') 
+temp.remove('M')
+
+temp_float=[float(i) for i in temp]
+var_sum=sum(temp_float)
+var_avg=var_sum/(len(temp_float))  
+
+day_temp=dict(zip(temp_float,day))
+
+high_temp=[i for i in day_temp if i >= 90]
+high_temp.sort(reverse=True)   
+
+light_snow=int(obs.count("-SN"))
+brl_snow=int(obs.count("-SN BR"))
+blowing_light=(obs.count("-SN BLSN"))
+blowing_snow=(obs.count("SN BLSN"))
+mist_snow=(obs.count("SN BR"))
+fzfog_snow=(obs.count("SN FZFG"))
+fog_snow=(obs.count("SN FG"))
+heavy_fog=(obs.count("+SN FG"))
+all_snow=light_snow + brl_snow + blowing_light + fzfog_light +\
+         blowing_snow + mist_snow + fzfog_snow + fog_snow + heavy_fog
+
+num_obs=len(obs)
+fraction_snow=float(all_snow/num_obs)
+
+print(num_obs)
+print('Reports of Snow', all_snow)
+print('Fraction of Reports with Snow', fraction_snow)
+print('Highest Temp and Time', high_temp[0], day_temp[high_temp[0]])
+print('Mean Temperature', var_avg)
+
+eawrght2@keeling Week5Answers: $ python HW4script2.py
+10970
+Reports of Snow 299
+Fraction of Reports with Snow 0.02725615314494075
+Highest Temp and Time 93.92 2016-06-11 14:53
+Mean Temperature 54.147963165572534
+---------------------------------
+
